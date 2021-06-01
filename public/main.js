@@ -1,0 +1,1 @@
+var socket = io.connect('http://localhost:3002', {'forceNew': true});
