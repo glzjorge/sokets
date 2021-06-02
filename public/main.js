@@ -13,3 +13,12 @@ function render(data){
             
                 document.getElementById('messages').innerHTML = html;
 };
+
+function addMessage(e){
+    var payload = {
+        autor: document.getElementById(username).value,
+        texto: document.getElementById(text).value
+    };
+    socket.emit('new-message', payload);
+    return false;
+}
